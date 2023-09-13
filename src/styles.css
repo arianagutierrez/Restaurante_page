@@ -1,0 +1,212 @@
+:root {
+    --colorDark1: #610000;
+    --colorDark2: #BB0000;
+    --colorLight1: #FF1616;
+    --colorLight2: #FF6868;
+    --colorWhite: #FFF;
+    --colorBlack: #000;
+    --colorBackground: rgba(255, 255, 255, 0.7);
+
+    --fontP: 'Braton Composer Stamp Rough', sans-serif;
+    --fontHome: 'Onely Sans', sans-serif;
+    --fontMenu: 'Amontesa', sans-serif;
+    --fontItem: 'Whitestone', sans-serif;
+    --fontContact: 'Bartone', sans-serif;
+}
+
+* { padding: 0; margin: 0; box-sizing: border-box;}
+
+body { width: 100%;}
+body::-webkit-scrollbar { width: 0.5rem; }
+body::-webkit-scrollbar-thumb { background-color: var(--colorDark2); }
+body::-webkit-scrollbar-track { background-color: var(--colorLight2); }
+
+.content { min-height: 100vh; }
+
+/* ------------------- Header & NavBar ------------------- */
+header {
+    background-color: var(--colorDark1);
+    color: var(--colorWhite);
+    display: flex; flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+header > h1 { padding: 0.31rem; margin-left: 20px; font-family: var(--fontP); font-size: 3rem; letter-spacing: 0.12rem; }
+
+nav {
+    display: flex; justify-content: center;
+    padding: 0; margin: 0; margin-right: 20px;
+    gap: 2.5rem;
+}
+nav > button { width: 135px; }
+
+.btnNav {
+    padding: 0.8rem;
+    font-family: var(--fontP);
+    font-size: 1.2rem; letter-spacing: 0.12rem;
+    background-color: transparent; color: var(--colorWhite);
+    border: none; border-bottom: 3px solid transparent;
+    transition: transform 0.3s;
+} 
+.btnNav.active { border-bottom: 3px solid var(--colorWhite); }  
+.btnNav:hover { transform: translateY(-10%); }
+
+/* ------------------- Main ------------------- */
+main {
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 2rem;
+    background-image: url(background.png);
+    background-position: center;
+    background-size: cover;
+}
+
+/* ------------------- HomePage ------------------- */
+.home-container {
+    background-color: var(--colorBackground);
+    display: flex; flex-direction: column;
+    padding: 1.8rem; gap: 2.86rem;
+    border-radius: 30px;
+}
+
+.presentation { display: flex; flex-direction: row; align-items: center;}
+.presentation > h1 { flex: 1; text-align: center; font-family: var(--fontP); letter-spacing: 0.15rem; font-size: 4.5rem; color: var(--colorDark2); }
+.presentation > p { flex: 1.5; padding: 1.8rem; font-family: var(--fontHome); font-size: 2.2rem; text-align: justify; color: #5A5151; }
+
+.specialties { display: flex; flex-direction: column; }
+.specialties > h1 { font-family: var(--fontP); font-size: 2.5rem; letter-spacing: 0.15rem; text-align: center; padding-bottom: 1rem; }
+.specialties > .peruvian { display: flex; flex-direction: row; gap: 2.2rem; font-family: var(--fontHome); }
+
+.peruvian > div { flex: 1;}
+.peruvian > div > h2 { text-transform: uppercase; text-align: center; letter-spacing: 0.5rem; padding-bottom: 0.8rem; color: var(--colorDark2)}
+.peruvian > div > p { text-align: justify; font-size: 1.1rem; color: #5A5151; }
+
+/* ------------------- MenuPage ------------------- */
+.menu-container {
+    background-color: var(--colorBackground);
+    display: flex; flex-direction: column;
+    padding: 1.8rem; gap: 1rem;    
+    border-radius: 30px;
+}
+
+.menu-section {
+    height: 100%;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    border-bottom: 5px double var(--colorLight1); 
+}
+.menu-section > h2 { font-family: var(--fontMenu); font-size: 1.93rem; color: var(--colorDark2) ; padding-bottom: 20px; }
+
+.menu-items { 
+    width: 100%; padding-bottom: 30px;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 1.5rem; font-family: var(--fontItem);
+}
+
+.menu-item {
+    height: 100%;
+    display: flex; flex-direction: column;
+    background-color: var(--colorWhite);
+    box-shadow: 4px 5px 2px var(--colorLight1);
+    border: 2px solid var(--colorLight2); border-radius: 15px;
+
+}
+.menu-item > h3 { padding-top: 15px; color: #B89800; text-align: center;text-transform: uppercase; font-size: 1.9rem;}
+.menu-item > p { text-align: justify; padding: 15px 30px; font-size: 1.25rem; }
+
+/* ------------------- ContactPage ------------------- */
+.contact-container {
+    background-color: var(--colorBackground);
+    display: flex; flex-direction: column;
+    padding: 1.8rem; gap: 3.5rem;    
+    border-radius: 30px;
+}
+
+.contact-info { display: flex; flex-direction: column; gap: 2rem; }
+
+.contact-item { width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.contact-item > h2 { 
+    font-family: var(--fontP); font-size: 3rem; 
+    margin-bottom: 40px; 
+    width: 100%; padding: 0.8rem;
+    background-color: var(--colorDark2);
+    color: var(--colorWhite);
+    text-align: center; letter-spacing: 0.3rem;
+}
+.contact-item > p { font-family: var(--fontContact); font-size: 2rem; }
+
+.reservation-section { display: flex; flex-direction: column; justify-content: center; align-items: center; }
+
+.reservation-section > h2 { 
+    font-family: var(--fontP); font-size: 3rem; 
+    margin-bottom: 30px;
+    width: 100%; padding: 0.8rem;
+    background-color: var(--colorDark2);
+    color: var(--colorWhite);
+    text-align: center; letter-spacing: 0.3rem; 
+}
+.reservation-section > form {
+    display: flex; flex-direction: column;
+    width: 100%; gap: 0.8rem;
+    font-family: var(--fontContact); font-size: 1.5rem;
+    padding: 0.8rem;
+}
+form > input {
+    font-family: var(--fontContact); font-size: 0.9rem ;
+    width: 100%; height: 2rem; padding: 0.5rem;
+    border: 2px solid var(--colorLight1);
+    margin-bottom: 15px;
+}
+form > button {
+    font-family: var(--fontContact); font-size: 1rem;
+    letter-spacing: 0.11rem;  
+    width: 40%; padding: 0.5rem; margin-left: 130px;
+    background-color: var(--colorBlack);
+    color: var(--colorWhite);
+    border-radius: 10px; border-color: var(--colorDark1);
+    box-shadow: 4px 5px var(--colorDark1);
+}
+form > button:hover { color: var(--colorLight2); }
+
+/* ------------------- footer ------------------- */
+footer {
+    background-color: var(--colorDark1);
+    color: var(--colorWhite);
+    display: flex; flex-direction: row; justify-content: center;
+    align-items: center; gap: 6px;
+    padding: 0.63rem;
+    font-family: var(--fontP); letter-spacing: 0.12rem;
+}
+
+.fa { transition: transform 0.2s ease-in-out; color: var(--colorWhite);}
+.fa:hover { transform: rotate(360deg) scale(1.2);}
+
+/* ------------------- @media ------------------- */
+@media only screen and (max-width: 910px) {
+    header {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header > h1 { margin-left: 0px; margin-bottom: 20px;}
+
+    nav { margin-left: 20px;}
+
+    .home-container { gap: 1rem; padding: 1.5rem; }
+
+    .presentation { flex-direction: column;}
+    .presentation > h1 { font-size: 3.15rem; }
+    .presentation > p { font-size: 1.57rem; padding: 1.5rem 0rem;}
+
+    .specialties > h1 { font-size: 1.5rem; }
+    .specialties > .peruvian { flex-direction: column; }
+
+    .peruvian > div > h2 { font-size: 1.25rem; }
+}
+
+@media only screen and (max-width: 510px) {
+    .contact-item > h2 { font-size: 1.4rem; padding: 0.5rem;}
+    .reservation-section > h2 { font-size: 1.4rem; padding: 0.5rem;}
+}
