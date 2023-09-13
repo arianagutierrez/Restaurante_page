@@ -206,7 +206,27 @@ footer {
     .peruvian > div > h2 { font-size: 1.25rem; }
 }
 
-@media only screen and (max-width: 510px) {
+@media only screen and (max-width: 515px) {
+    header {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header > h1 { margin-left: 0px; margin-bottom: 20px;}
+
+    nav { margin-left: 20px;}
+
+    .home-container { gap: 1rem; padding: 1.5rem; }
+
+    .presentation { flex-direction: column;}
+    .presentation > h1 { font-size: 3.15rem; }
+    .presentation > p { font-size: 1.57rem; padding: 1.5rem 0rem;}
+
+    .specialties > h1 { font-size: 1.5rem; }
+    .specialties > .peruvian { flex-direction: column; }
+
+    .peruvian > div > h2 { font-size: 1.25rem; }
+    
     .contact-item > h2 { font-size: 1.4rem; padding: 0.5rem;}
     .reservation-section > h2 { font-size: 1.4rem; padding: 0.5rem;}
 }
