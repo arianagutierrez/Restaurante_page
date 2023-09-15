@@ -8,9 +8,12 @@ function home() {
     const titleP = document.createElement('h1');
     titleP.textContent = 'Your favourite Peruvian restaurant';
     const presentationT = document.createElement('p');
-    presentationT.textContent = 'Welcome to our peruvian restaurant, where you can enjoy authentic Peruvian delicacies. Our cuisine will take you on a culinary journey through the traditions and flavours of Peru. Macchupisco, takes its name from one of the wonders of the world and the Peruvian national drink: Pisco.';
+    presentationT.textContent = 'Welcome to our peruvian restaurant, where you can enjoy authentic Peruvian delicacies. Our cuisine will take you on a culinary journey through the traditions and flavours of Peru. Machupisco, takes its name from one of the wonders of the world and the Peruvian national drink: Pisco.';
     
     presentation.appendChild(titleP); presentation.appendChild(presentationT);
+
+    const divider = document.createElement('div');
+    divider.classList.add("divider");
 
     const foodSpecialties = document.createElement('div');
     foodSpecialties.classList.add("specialties");
@@ -35,6 +38,7 @@ function home() {
     foodSpecialties.appendChild(divS);
 
     homeContainer.appendChild(presentation);
+    homeContainer.appendChild(divider);
     homeContainer.appendChild(foodSpecialties);
 
     return homeContainer

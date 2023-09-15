@@ -7,7 +7,7 @@ function createHeader() {
 
     const title = document.createElement('h1');
     title.classList.add("restaurant-name");
-    title.textContent = 'Macchupisco';
+    title.textContent = 'Machupisco';
   
     header.appendChild(title);
     header.appendChild(createNavBar());
@@ -56,13 +56,13 @@ function createNavBar() {
 
 function setActiveButton(button) {
     const buttons = document.querySelectorAll(".btnNav");
-  
+
     buttons.forEach((button) => {
       if (button !== this) {
         button.classList.remove("active");
       }
     });
-  
+
     button.classList.add("active");
 }
 
