@@ -123,7 +123,8 @@ main {
     transition: transform 0.3s;
 }
 .menu-item > .image:hover {
-    transform: scale(1.2);
+    cursor: pointer;
+    transform: scale(1.2); 
 }
 .menu-item > p { text-align: justify; font-size: 1.25rem; letter-spacing: 1px;}
 
